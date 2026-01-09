@@ -1,4 +1,4 @@
-import { Clock, DollarSign, Activity, ChevronDown } from "lucide-react"
+import { Clock, DollarSign, Activity, ArrowDownIcon,ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
 import { Card } from "@/components/ui/card"
@@ -52,7 +52,7 @@ export function HeroSection({ scenario = "new" }: HeroSectionProps) {
 
                 {/* Score Description */}
                 <div className="space-y-3 pt-8">
-                  <h2 className="text-2xl font-bold">Your wellness score</h2>
+                  <h2 className="font-bold text-xl">Your wellness score</h2>
                   <p className="text-muted-foreground">Healthier habits = a higher score</p>
                   <div className="inline-flex items-center gap-2 text-sm font-medium">
                     <span>On-track</span>
@@ -82,7 +82,7 @@ export function HeroSection({ scenario = "new" }: HeroSectionProps) {
               </Card>
               <div className="flex justify-center mt-6">
                 <Button variant="ghost" size="sm">
-                  <ChevronDown className="w-5 h-5" />
+                  <ArrowDownIcon className="w-5 h-5" />
                 </Button>
               </div>
             </div>
@@ -118,8 +118,8 @@ export function HeroSection({ scenario = "new" }: HeroSectionProps) {
 
               {/* Content */}
               <div className="space-y-4">
-                <h2 className="text-3xl font-bold">Experiencing the outdoors</h2>
-                <p className="text-white/90 text-lg">
+                <h2 className="font-bold text-xl">Experiencing the outdoors</h2>
+                <p className="text-white/90 text-base">
                   Getting outdoors is scientifically proven to help with depression, anxiety...{" "}
                   <button className="underline font-medium">see more</button>
                 </p>
