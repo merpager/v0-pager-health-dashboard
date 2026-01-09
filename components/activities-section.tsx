@@ -42,7 +42,7 @@ export function ActivitiesSection() {
               alt={activity.title}
               className="w-full h-[280px] object-cover"
             />
-            <div className="p-6 space-y-6 py-0">
+            <div className="p-6 space-y-6 py-6">
               <div className="space-y-3">
                 <h3 className="text-xl font-bold">{activity.title}</h3>
                 <p className="text-gray-600 text-[15px] leading-relaxed">{activity.description}</p>

@@ -4,10 +4,10 @@ export function Footer() {
       <div className="max-w-[1440px] mx-auto px-6 py-12">
         <div className="grid gap-8 md:grid-cols-4">
           <div className="space-y-4">
-            <h3 className="font-semibold text-sm">Onlife</h3>
             <div className="flex flex-col gap-2">
-              <img src="/app-store-badge.png" alt="Download on App Store" className="h-10 w-auto" />
-              <img src="/google-play-badge.png" alt="Get it on Google Play" className="h-10 w-auto" />
+              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Logo-pSngDb8R8qpAgAJvCKIiDRUvdUHdGD.png" alt="Download on App Store" className="h-10 w-fit" />
+              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Store%20download%20button-0mfBsxPB1nu6SRlH0ixRARqydU1TfD.png" alt="Download on App Store" className="h-10 w-fit" />
+              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Store%20download%20button2-uoJzyrhmdVSe9WSLbLfI7zWXPvdHGq.png" alt="Get it on Google Play" className="h-10 w-fit" />
             </div>
           </div>
 

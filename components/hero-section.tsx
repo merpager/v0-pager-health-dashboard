@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button"
 export function HeroSection() {
   return (
     <div className="relative overflow-hidden rounded-2xl bg-[#0066FF] p-8 text-white">
-      <div className="relative z-10 flex items-center justify-between">
-        <div className="max-w-md space-y-4">
+      <div className="relative z-10 flex items-center justify-between mx-0 px-0 gap-8 flex-row">
+        <div className="flex-1 space-y-4">
           <div className="inline-block rounded-full bg-white/20 px-3 py-1 text-xs font-medium">Recommended</div>
 
           <h1 className="text-2xl font-bold text-balance">Unlock tailored advice made for you</h1>
@@ -35,7 +35,7 @@ export function HeroSection() {
         </div>
 
         <div className="hidden lg:block">
-          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image-jqERsbqfNPMsFadIm0UNqD4dUfVx7n.png" alt="Healthcare professional" className="h-60 w-auto" />
+          <img src="/images/image.png" alt="Healthcare professional" className="h-[200px] w-[200px]" />
         </div>
       </div>
     </div>

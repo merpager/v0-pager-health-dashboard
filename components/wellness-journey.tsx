@@ -38,20 +38,22 @@ export function WellnessJourney() {
       <div className="space-y-3">
         {steps.map((step, index) => (
           <Card key={index} className="hover:bg-muted/50 transition-colors cursor-pointer">
-            <CardContent className="p-4 py-0">
-              <div className="flex items-center gap-4">
-                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-muted">
-                  <step.icon className="w-5 h-5 text-muted-foreground" />
+            <div className="py-4 px-0">
+              <CardContent className="p-4 py-0">
+                <div className="flex items-center gap-4">
+                  <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-muted">
+                    <step.icon className="w-5 h-5 text-muted-foreground" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-medium">{step.title}</h3>
+                    <p className="text-sm text-muted-foreground">{step.description}</p>
+                  </div>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M7 4l6 6-6 6" />
+                  </svg>
                 </div>
-                <div className="flex-1">
-                  <h3 className="font-medium">{step.title}</h3>
-                  <p className="text-sm text-muted-foreground">{step.description}</p>
-                </div>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M7 4l6 6-6 6" />
-                </svg>
-              </div>
-            </CardContent>
+              </CardContent>
+            </div>
           </Card>
         ))}
       </div>
