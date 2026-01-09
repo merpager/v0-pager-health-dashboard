@@ -3,7 +3,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 
-export function Sidebar() {
+interface SidebarProps {
+  scenario?: "new" | "in-progress" | "complete" | "reroll"
+}
+
+export function Sidebar({ scenario = "new" }: SidebarProps) {
   const rewards = [
     { icon: DollarSign, label: "Earn $100" },
     { icon: TrendingUp, label: "Earn 1000 points" },
@@ -24,6 +28,9 @@ export function Sidebar() {
       label: "Reduce screen time",
     },
   ]
+
+  const hasStartedActivities = scenario === "in-progress" || scenario === "complete"
+  const activitiesTitle = hasStartedActivities ? "In progress" : "Explore activities"
 
   return (
     <aside className="w-80 space-y-4 hidden lg:block">
@@ -88,7 +95,7 @@ export function Sidebar() {
           <CardHeader className="pb-3">
             <div className="flex items-center gap-2">
               <Activity className="w-4 h-4" />
-              <CardTitle className="text-base">Explore activities</CardTitle>
+              <CardTitle className="text-base">{activitiesTitle}</CardTitle>
             </div>
           </CardHeader>
           <CardContent className="space-y-4">
