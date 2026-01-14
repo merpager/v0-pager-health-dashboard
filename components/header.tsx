@@ -1,6 +1,9 @@
-import { Sparkles, MailIcon, ChevronDown } from "lucide-react"
+"use client"
+
+import { Sparkles, MailIcon, ChevronDown, Heart, ClipboardList, BookOpen } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 
 export function Header() {
   return (
@@ -28,10 +31,47 @@ export function Header() {
               <a href="#" className="text-sm text-muted-foreground hover:text-foreground">
                 Program summary
               </a>
-              <a href="#" className="text-sm text-muted-foreground hover:text-foreground flex items-center gap-1">
-                Resources
-                <ChevronDown className="w-4 h-4" />
-              </a>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button className="text-sm text-muted-foreground hover:text-foreground flex items-center gap-1 outline-none">
+                    Resources
+                    <ChevronDown className="w-4 h-4" />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="p-6 bg-white w-80">
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-4 cursor-pointer hover:opacity-80 transition-opacity">
+                      <Heart className="w-6 h-6 text-foreground flex-shrink-0 mt-1" />
+                      <div>
+                        <h3 className="font-semibold text-base text-foreground mb-1">My health assessment</h3>
+                        <p className="text-sm text-muted-foreground">
+                          Take your current assessment or review past results
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-border" />
+
+                    <div className="flex items-start gap-4 cursor-pointer hover:opacity-80 transition-opacity">
+                      <ClipboardList className="w-6 h-6 text-foreground flex-shrink-0 mt-1" />
+                      <div>
+                        <h3 className="font-semibold text-base text-foreground mb-1">Your wellness report</h3>
+                        <p className="text-sm text-muted-foreground">See your health assessment results and progress</p>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-border" />
+
+                    <div className="flex items-start gap-4 cursor-pointer hover:opacity-80 transition-opacity">
+                      <BookOpen className="w-6 h-6 text-foreground flex-shrink-0 mt-1" />
+                      <div>
+                        <h3 className="font-semibold text-base text-foreground mb-1">Health & wellness hub</h3>
+                        <p className="text-sm text-muted-foreground">Health resources and wellness content</p>
+                      </div>
+                    </div>
+                  </div>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </nav>
 
             <div className="flex items-center gap-3">

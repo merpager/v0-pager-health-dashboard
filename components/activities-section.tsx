@@ -54,8 +54,16 @@ export function ActivitiesSection() {
                 {activity.badge && (
                   <span className="rounded-full bg-[#0066FF] px-4 py-1.5 text-white font-medium">{activity.badge}</span>
                 )}
-                {activity.duration && <span className="text-gray-700">{activity.duration}</span>}
-                {activity.type && <span className="text-gray-700">{activity.type}</span>}
+                {activity.duration && (
+                  <span className="rounded-full bg-gray-100 px-4 py-1.5 text-gray-700 font-medium">
+                    {activity.duration}
+                  </span>
+                )}
+                {activity.type && (
+                  <span className="rounded-full bg-gray-100 px-4 py-1.5 text-gray-700 font-medium">
+                    {activity.type}
+                  </span>
+                )}
               </div>
 
               <Button className="w-full bg-[#0066FF] hover:bg-[#0052CC] text-white rounded-full h-12 text-base font-medium">
